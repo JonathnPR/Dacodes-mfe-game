@@ -1,25 +1,46 @@
-# Logs
-logs
+# === General ignores ===
 *.log
+logs/
 npm-debug.log*
+pnpm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
+# === Dependency directories ===
+node_modules/
+.pnp/
+.pnp.js
+
+# === Build output ===
+dist/
+dist-ssr/
+build/
+out/
+coverage/
+
+# === Local env/config ===
+.env
+.env.*
 *.local
 
-# Editor directories and files
-!.vscode/extensions.json
-.idea
+# === IDEs and editors ===
+.vscode/
+.idea/
 .DS_Store
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
-.env
-!.env.local
+
+# === Misc ===
+*.pid
+*.seed
+*.pid.lock
+*.tgz
+*.tmp
+*.temp
+
+# === VSCode settings (keep extensions.json) ===
+!.vscode/extensions.json
