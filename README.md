@@ -52,13 +52,13 @@ Follow these steps to get the project up and running:
    docker-compose up -d
    ```
 
-3. **Free up ports 6999 and 6998:**
+3. **Free up ports 6991 and 6990:**
 
-   Make sure ports 6999 and 6998 are not in use. You can kill any processes using them with:
+   Make sure ports 6991 and 6990 are not in use. You can kill any processes using them with:
 
    ```sh
-   lsof -ti:6999 | xargs kill -9
-   lsof -ti:6998 | xargs kill -9
+   lsof -ti:6991 | xargs kill -9
+   lsof -ti:6990 | xargs kill -9
    ```
 
 4. **Install dependencies:**
@@ -139,7 +139,7 @@ Example:
 ```env
 VITE_APP_GATEWAY_PORT=8700
 VITE_SERVICE_A_ENTRY=http://localhost:8700/assets/root.js
-VITE_API_RANK_URL=http://localhost:6999
+VITE_API_RANK_URL=http://localhost:6991
 VITE_CACHE_HOSTNAME=localhost
 VITE_CACHE_PORT=6379
 ```
