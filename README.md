@@ -26,6 +26,72 @@ You can try a small demo of the platform (without WebSockets) here:
 
 ---
 
+## Requirements
+
+- [Node.js](https://nodejs.org/) >= 18.x
+- [pnpm](https://pnpm.io/) >= 8.x
+- [Docker](https://www.docker.com/) (for running Redis and optionally the backend)
+
+---
+
+## Quick Start
+
+Follow these steps to get the project up and running:
+
+1. **Set up your environment variables:**
+
+   Copy `.env.example` to `.env` in the root and adjust the values as needed:
+
+   ```sh
+   cp env.example .env
+   ```
+
+2. **Start Docker (Redis):**
+
+   ```sh
+   docker-compose up -d
+   ```
+
+3. **Free up ports 6999 and 6998:**
+
+   Make sure ports 6999 and 6998 are not in use. You can kill any processes using them with:
+
+   ```sh
+   lsof -ti:6999 | xargs kill -9
+   lsof -ti:6998 | xargs kill -9
+   ```
+
+4. **Install dependencies:**
+
+   ```sh
+   pnpm install
+   ```
+
+5. **Build all packages:**
+
+   ```sh
+   pnpm build
+   ```
+
+6. **Start the backend:**
+
+   ```sh
+   cd apis/leaderboard
+   pnpm install && pnpm build && pnpm start
+   ```
+
+7. **In another terminal, from the root, start the frontend:**
+
+   ```sh
+   pnpm build && pnpm start
+   ```
+
+8. **Open the app:**
+
+   Go to [http://localhost:8700/login](http://localhost:8700/login)
+
+---
+
 ## Project Structure
 
 ```
@@ -50,14 +116,6 @@ Dacodes-mfe-game/
 ├── pnpm-workspace.yaml  # pnpm workspace configuration
 └── tsconfig.base.json   # Base TypeScript config
 ```
-
----
-
-## Requirements
-
-- [Node.js](https://nodejs.org/) >= 18.x
-- [pnpm](https://pnpm.io/) >= 8.x
-- [Docker](https://www.docker.com/) (for running Redis and optionally the backend)
 
 ---
 
@@ -122,9 +180,13 @@ pnpm --filter @dacodes/profile-mfe dev
 pnpm --filter @dacodes/shell dev
 ```
 
-For the backend:
+For the backend, **make sure to start Docker first** (for Redis):
 
 ```sh
+# Start Redis (required for backend)
+docker-compose up -d
+
+# Then start the backend service
 cd apis/leaderboard
 pnpm start
 ```
