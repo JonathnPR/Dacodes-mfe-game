@@ -38,7 +38,7 @@ export default function UserProfileView(): React.ReactNode {
 				<div className="max-w-4xl mx-auto">
 					<div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 text-center">
 						<div className="animate-spin rounded-full h-12 w-12 border-b-2 border-white mx-auto"></div>
-						<p className="text-white/80 mt-4">Cargando perfil...</p>
+						<p className="text-white/80 mt-4">Loading profile...</p>
 					</div>
 				</div>
 			</div>
@@ -52,9 +52,9 @@ export default function UserProfileView(): React.ReactNode {
 					<div className="bg-red-500/20 backdrop-blur-md rounded-2xl p-6 border border-red-500/30">
 						<div className="flex items-center space-x-3 text-red-400">
 							<Shield size={24} />
-							<h3 className="text-lg font-semibold">No se encontró el usuario</h3>
+							<h3 className="text-lg font-semibold">User not found</h3>
 						</div>
-						<p className="text-red-300 mt-2">El perfil solicitado no existe o no está disponible.</p>
+						<p className="text-red-300 mt-2">The requested profile does not exist or is not available.</p>
 					</div>
 				</div>
 			</div>
@@ -73,12 +73,12 @@ export default function UserProfileView(): React.ReactNode {
 						className="flex items-center space-x-2 px-4 py-2 bg-white/10 text-white border border-white/20 rounded-lg hover:bg-white/20 hover:border-white/30 transition-all duration-200"
 					>
 						<ArrowLeft size={20} />
-						<span>Volver</span>
+						<span>Back</span>
 					</button>
 					
 					<div className="text-right">
-						<h1 className="text-2xl font-bold text-white">Perfil de Usuario</h1>
-						<p className="text-white/60">Información detallada</p>
+						<h1 className="text-2xl font-bold text-white">User Profile</h1>
+						<p className="text-white/60">Detailed information</p>
 					</div>
 				</div>
 
@@ -104,7 +104,7 @@ export default function UserProfileView(): React.ReactNode {
 									{data.gender}
 								</span>
 								<span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm">
-									{data.age} años
+									{data.age} years
 								</span>
 								<span className="px-3 py-1 bg-green-500/20 text-green-300 rounded-full text-sm">
 									{data.role}
@@ -120,7 +120,7 @@ export default function UserProfileView(): React.ReactNode {
 					<div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
 						<div className="flex items-center space-x-3 mb-6">
 							<User className="text-blue-400" size={24} />
-							<h3 className="text-xl font-bold text-white">Información Personal</h3>
+							<h3 className="text-xl font-bold text-white">Personal Information</h3>
 						</div>
 						
 						<div className="space-y-4">
@@ -135,7 +135,7 @@ export default function UserProfileView(): React.ReactNode {
 							<div className="flex items-center space-x-3">
 								<Phone className="text-white/60" size={18} />
 								<div>
-									<p className="text-white/60 text-sm">Teléfono</p>
+									<p className="text-white/60 text-sm">Phone</p>
 									<p className="text-white font-medium">{data.phone}</p>
 								</div>
 							</div>
@@ -143,7 +143,7 @@ export default function UserProfileView(): React.ReactNode {
 							<div className="flex items-center space-x-3">
 								<Heart className="text-white/60" size={18} />
 								<div>
-									<p className="text-white/60 text-sm">Fecha de nacimiento</p>
+									<p className="text-white/60 text-sm">Birth date</p>
 									<p className="text-white font-medium">{data.birthDate}</p>
 								</div>
 							</div>
@@ -151,7 +151,7 @@ export default function UserProfileView(): React.ReactNode {
 							<div className="flex items-center space-x-3">
 								<IdCard className="text-white/60" size={18} />
 								<div>
-									<p className="text-white/60 text-sm">Apellido de soltera</p>
+									<p className="text-white/60 text-sm">Maiden name</p>
 									<p className="text-white font-medium">{data.maidenName}</p>
 								</div>
 							</div>
@@ -162,14 +162,14 @@ export default function UserProfileView(): React.ReactNode {
 					<div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
 						<div className="flex items-center space-x-3 mb-6">
 							<Scale className="text-green-400" size={24} />
-							<h3 className="text-xl font-bold text-white">Información Física</h3>
+							<h3 className="text-xl font-bold text-white">Physical Information</h3>
 						</div>
 						
 						<div className="space-y-4">
 							<div className="flex items-center space-x-3">
 								<Heart className="text-white/60" size={18} />
 								<div>
-									<p className="text-white/60 text-sm">Grupo sanguíneo</p>
+									<p className="text-white/60 text-sm">Blood group</p>
 									<p className="text-white font-medium">{data.bloodGroup}</p>
 								</div>
 							</div>
@@ -177,7 +177,7 @@ export default function UserProfileView(): React.ReactNode {
 							<div className="flex items-center space-x-3">
 								<Ruler className="text-white/60" size={18} />
 								<div>
-									<p className="text-white/60 text-sm">Altura</p>
+									<p className="text-white/60 text-sm">Height</p>
 									<p className="text-white font-medium">{data.height} cm</p>
 								</div>
 							</div>
@@ -185,7 +185,7 @@ export default function UserProfileView(): React.ReactNode {
 							<div className="flex items-center space-x-3">
 								<Scale className="text-white/60" size={18} />
 								<div>
-									<p className="text-white/60 text-sm">Peso</p>
+									<p className="text-white/60 text-sm">Weight</p>
 									<p className="text-white font-medium">{data.weight} kg</p>
 								</div>
 							</div>
@@ -193,7 +193,7 @@ export default function UserProfileView(): React.ReactNode {
 							<div className="flex items-center space-x-3">
 								<Eye className="text-white/60" size={18} />
 								<div>
-									<p className="text-white/60 text-sm">Color de ojos</p>
+									<p className="text-white/60 text-sm">Eye color</p>
 									<p className="text-white font-medium">{data.eyeColor}</p>
 								</div>
 							</div>
@@ -201,7 +201,7 @@ export default function UserProfileView(): React.ReactNode {
 							<div className="flex items-center space-x-3">
 								<Scissors className="text-white/60" size={18} />
 								<div>
-									<p className="text-white/60 text-sm">Cabello</p>
+									<p className="text-white/60 text-sm">Hair</p>
 									<p className="text-white font-medium">{data.hair.color} - {data.hair.type}</p>
 								</div>
 							</div>
@@ -212,12 +212,12 @@ export default function UserProfileView(): React.ReactNode {
 					<div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
 						<div className="flex items-center space-x-3 mb-6">
 							<MapPin className="text-red-400" size={24} />
-							<h3 className="text-xl font-bold text-white">Dirección</h3>
+							<h3 className="text-xl font-bold text-white">Address</h3>
 						</div>
 						
 						<div className="space-y-4">
 							<div>
-								<p className="text-white/60 text-sm">Dirección completa</p>
+								<p className="text-white/60 text-sm">Full address</p>
 								<p className="text-white font-medium">
 									{data.address.address}, {data.address.city}
 								</p>
@@ -249,27 +249,27 @@ export default function UserProfileView(): React.ReactNode {
 					<div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
 						<div className="flex items-center space-x-3 mb-6">
 							<Building className="text-yellow-400" size={24} />
-							<h3 className="text-xl font-bold text-white">Información Laboral</h3>
+							<h3 className="text-xl font-bold text-white">Company Information</h3>
 						</div>
 						
 						<div className="space-y-4">
 							<div>
-								<p className="text-white/60 text-sm">Empresa</p>
+								<p className="text-white/60 text-sm">Company</p>
 								<p className="text-white font-medium">{data.company.name}</p>
 							</div>
 							
 							<div>
-								<p className="text-white/60 text-sm">Cargo</p>
+								<p className="text-white/60 text-sm">Title</p>
 								<p className="text-white font-medium">{data.company.title}</p>
 							</div>
 							
 							<div>
-								<p className="text-white/60 text-sm">Departamento</p>
+								<p className="text-white/60 text-sm">Department</p>
 								<p className="text-white font-medium">{data.company.department}</p>
 							</div>
 							
 							<div>
-								<p className="text-white/60 text-sm">Dirección de la empresa</p>
+								<p className="text-white/60 text-sm">Company address</p>
 								<p className="text-white font-medium">
 									{data.company.address.address}, {data.company.address.city}
 								</p>
@@ -285,27 +285,27 @@ export default function UserProfileView(): React.ReactNode {
 					<div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
 						<div className="flex items-center space-x-3 mb-6">
 							<CreditCard className="text-green-400" size={24} />
-							<h3 className="text-xl font-bold text-white">Información Bancaria</h3>
+							<h3 className="text-xl font-bold text-white">Bank Information</h3>
 						</div>
 						
 						<div className="space-y-4">
 							<div>
-								<p className="text-white/60 text-sm">Tarjeta</p>
+								<p className="text-white/60 text-sm">Card</p>
 								<p className="text-white font-medium">{data.bank.cardType}</p>
 							</div>
 							
 							<div>
-								<p className="text-white/60 text-sm">Número</p>
+								<p className="text-white/60 text-sm">Number</p>
 								<p className="text-white font-medium">{data.bank.cardNumber}</p>
 							</div>
 							
 							<div>
-								<p className="text-white/60 text-sm">Expira</p>
+								<p className="text-white/60 text-sm">Expires</p>
 								<p className="text-white font-medium">{data.bank.cardExpire}</p>
 							</div>
 							
 							<div>
-								<p className="text-white/60 text-sm">Moneda</p>
+								<p className="text-white/60 text-sm">Currency</p>
 								<p className="text-white font-medium">{data.bank.currency}</p>
 							</div>
 							
@@ -320,14 +320,14 @@ export default function UserProfileView(): React.ReactNode {
 					<div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
 						<div className="flex items-center space-x-3 mb-6">
 							<Shield className="text-purple-400" size={24} />
-							<h3 className="text-xl font-bold text-white">Información Adicional</h3>
+							<h3 className="text-xl font-bold text-white">Additional Information</h3>
 						</div>
 						
 						<div className="space-y-4">
 							<div className="flex items-center space-x-3">
 								<GraduationCap className="text-white/60" size={18} />
 								<div>
-									<p className="text-white/60 text-sm">Universidad</p>
+									<p className="text-white/60 text-sm">University</p>
 									<p className="text-white font-medium">{data.university}</p>
 								</div>
 							</div>
@@ -335,7 +335,7 @@ export default function UserProfileView(): React.ReactNode {
 							<div className="flex items-center space-x-3">
 								<Coins className="text-white/60" size={18} />
 								<div>
-									<p className="text-white/60 text-sm">Criptomoneda</p>
+									<p className="text-white/60 text-sm">Cryptocurrency</p>
 									<p className="text-white font-medium">{data.crypto.coin}</p>
 								</div>
 							</div>

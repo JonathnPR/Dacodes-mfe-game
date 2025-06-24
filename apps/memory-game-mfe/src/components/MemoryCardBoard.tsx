@@ -84,13 +84,13 @@ export default function MemoryCardBoard({
 
 					<div className="flex justify-center space-x-4">
 						<button 
-							className="bg-white/10 text-white border-white/20 hover:bg-white/20 hover:border-white/30"
+							className="flex items-center px-4 py-2 rounded-lg bg-white/10 text-white border border-white/20 hover:bg-white/20 hover:border-white/30 transition"
 							onClick={handleBack}
 						>
-							Volver
+							Back
 						</button>
 						<button 
-							className="bg-white/10 text-white border-white/20 hover:bg-white/20 hover:border-white/30"
+							className="flex items-center px-4 py-2 rounded-lg bg-white/10 text-white border border-white/20 hover:bg-white/20 hover:border-white/30 transition"
 							onClick={handleRestart}
 						>
 							<RotateCcw size={16} />
