@@ -2,6 +2,14 @@
 
 This repository is a monorepo for a modular web platform using **Micro-Frontends (MFEs)** with React, Vite, Module Federation, and a backend built with **NestJS**. It is managed with **pnpm workspaces** for efficient dependency and project management.
 
+## Demo (No WebSockets)
+
+You can try a small demo of the platform (without WebSockets) here:
+
+👉 [https://dacodesmfe.netlify.app/](https://dacodesmfe.netlify.app/)
+
+> **Note:** This demo version does not include real-time features via WebSockets.
+
 ---
 
 ## Table of Contents
