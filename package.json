@@ -1,0 +1,47 @@
+{
+  "project": "dacodes-mfe-platform",
+  "meta": {
+    "maintainer": "Jonathan Pernia",
+    "created": "2025-06-24",
+    "license": "ISC"
+  },
+  "version": "1.0.0",
+  "description": "Plataforma modular con MFEs y backend, gestionada con pnpm workspaces.",
+  "scripts": {
+    "dev": "pnpm --recursive dev",
+    "build": "pnpm --recursive build",
+    "preview": "pnpm --recursive preview",
+    "start": "pnpm -r --workspace-concurrency=7 run start",
+    "dev:auth": "pnpm --filter @dacodes/auth-mfe dev:auth",
+    "dev:directory": "pnpm --filter @dacodes/directory-mfe dev:directory",
+    "dev:game": "pnpm --filter @dacodes/memory-game-mfe dev:game",
+    "dev:profile": "pnpm --filter @dacodes/profile-mfe dev:profile",
+    "dev:shell": "pnpm --filter @dacodes/shell dev:shell",
+    "build:lib": "pnpm --filter @dacodes/lib build"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "antd": "^5.26.0",
+    "@ant-design/icons": "^6.0.0",
+    "@tanstack/react-query": "^5.80.7",
+    "@tanstack/react-query-persist-client": "^5.80.7",
+    "lucide-react": "^0.522.0",
+    "vite-plugin-federation": "^0.0.1"
+  },
+  "devDependencies": {
+    "typescript": "~5.8.3",
+    "vite": "^6.3.5",
+    "@vitejs/plugin-react": "^4.5.2",
+    "@originjs/vite-plugin-federation": "^1.4.1",
+    "@types/node": "^24.0.1",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "concurrently": "^9.1.2",
+    "globals": "^16.2.0",
+    "@biomejs/biome": "^1.9.4",
+    "vitest": "^3.2.4"
+  },
+  "workspaceManager": "pnpm@10.10.0",
+  "packageManager": "pnpm@10.10.0+sha512.d615db246fe70f25dcfea6d8d73dee782ce23e2245e3c4f6f888249fb568149318637dca73c2c5c8ef2a4ca0d5657fb9567188bfab47f566d1ee6ce987815c39"
+}

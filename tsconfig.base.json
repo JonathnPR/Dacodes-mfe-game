@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "@dacodes/auth-mfe/App":        ["./apps/auth-mfe/src/App"],
+      "@dacodes/directory-mfe/App":   ["./apps/directory-mfe/src/App"],
+      "@dacodes/memory-game-mfe/App": ["./apps/memory-game-mfe/src/App"],
+      "@dacodes/profile-mfe/App":     ["./apps/profile-mfe/src/App"],
+      "@dacodes/shell/AppProvider":   ["./apps/shell/src/components/AppProvider"],
+      "@dacodes/shell/httpClient":    ["./apps/shell/src/config/http.client"],
+      "@dacodes/shell/queryClient":   ["./apps/shell/src/config/query.client"],
+      "@dacodes/shell/useNotify":     ["./apps/shell/src/hooks/useNotify"]
+    }
+  }
+}

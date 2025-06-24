@@ -1,0 +1,20 @@
+{
+  "name": "@dacodes/memory-game-mfe",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc -noEmit && vite build",
+    "dev": "concurrently \"vite preview -l silent\" \"vite build --watch\"",
+    "start": "vite preview"
+  },
+  "dependencies": {
+    "@dacodes/lib": "workspace:*",
+    "socket.io-client": "^4.8.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.5",
+    "tailwindcss": "^3.4.17"
+  }
+}
